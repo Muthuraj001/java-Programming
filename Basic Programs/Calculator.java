@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class Calculator {
 
     public static void main(String[] args) {
-        double res;
+        double res,a,b;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter first number : ");
-        double a = sc.nextDouble();
+        a = sc.nextDouble();
         System.out.print("Enter a Operator : ");
         char operator = sc.next().charAt(0);
         System.out.print("Enter second number : ");
-        double b = sc.nextDouble();
+        b = sc.nextDouble();
 
         switch (operator) {
             case '+':

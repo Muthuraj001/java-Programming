@@ -1,20 +1,18 @@
-public class PrimeNumber {
-    public static void main(String[] args) {
-        int num = 29; // Number to check
-        boolean isPrime = true;
+import java.util.Scanner;
 
-        if (num <= 1) {
-            isPrime = false;
-        } else {
-            for (int i = 2; i <= Math.sqrt(num); i++) {
-                if (num % i == 0) {
-                    isPrime = false;
-                    break;
-                }
+public class PrimeNumber {
+
+    public static void main(String[] args) {
+        int num, i, count = 0;
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter a number : ");
+        num = sc.nextInt();
+        for (i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                count++;
             }
         }
-
-        if (isPrime) {
+        if (count == 2) {
             System.out.println(num + " is a prime number.");
         } else {
             System.out.println(num + " is not a prime number.");

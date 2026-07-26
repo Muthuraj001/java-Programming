@@ -34,9 +34,18 @@ public class Calculator {
                     System.out.println("Result => " + a + " " + operator + " " + b + " = " + res);
                     break;
                 }
+            case '%':
+                if (b == 0) {
+                    System.out.println("Error: Division by zero is not allowed.");
+                    break;  
+                }else {
+                    res = a % b;
+                    System.out.println("Result => " + a + " " + operator + " " + b + " = " + res);
+                    break;
+                }   
             default:
                 System.out.println("Error: Invalid operator entered.");
+            }
         }
     }
-    
-}
+

@@ -27,11 +27,21 @@ public class Calculator {
             case '/':
                 if (n2 != 0) {
                     result = n1 / n2;
+                    System.out.println("Result: " + n1 + " " + operator + " " + n2 + " = " + result);
+                    break;
                 } else {
                     System.out.println("Error! Division by zero.");
                     return;
                 }
-                break;
+            case '%':
+                if (n2 != 0) {
+                    result = n1 % n2;
+                    System.out.println("Result: " + n1 + " " + operator + " " + n2 + " = " + result);
+                    break;
+                } else {
+                    System.out.println("Error! Division by zero.");
+                    return;
+                }
             default:
                 System.out.println("Invalid operator!");
                 return;
